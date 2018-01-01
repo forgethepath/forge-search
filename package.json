@@ -1,0 +1,13 @@
+{
+  "name": "forge-search",
+  "version": "1.0.0",
+  "description": "pushes forge-blog json data to algolia search index",
+  "main": "app.js",
+  "author": "Forge",
+  "license": "MIT",
+  "dependencies": {
+    "algoliasearch": "^3.24.9",
+    "axios": "^0.17.1",
+    "dotenv": "^4.0.0"
+  }
+}
