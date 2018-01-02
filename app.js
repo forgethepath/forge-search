@@ -8,7 +8,7 @@ const appid = process.env.ALGOLIA_APPID;
 const token = process.env.ALGOLIA_TOKEN;
 const client = algoliasearch(appid, token);
 const index  = client.initIndex('forge_search');
-const endpoint = 'https://forge-blog.netlify.com/index.json'
+const endpoint = 'https://forge-blog.netlify.com/api'
 
 const getForgeData = async () => {
   try {
