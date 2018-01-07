@@ -10,6 +10,16 @@ const client = algoliasearch(appid, token);
 const index  = client.initIndex('forge_search');
 const endpoint = 'https://forge-blog.netlify.com/api'
 
+index.setSettings({
+  searchableAttributes: [
+    'title',
+    'content_html'
+  ],
+  customRanking: [
+    'desc(popularity)'
+  ]
+});
+
 const getForgeData = async () => {
   try {
     const response = await axios.get(endpoint);
